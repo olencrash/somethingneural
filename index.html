@@ -6,8 +6,9 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <style>
   body {
-   display: flex;
-   flex-direction: column;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: auto 1fr;
    align-items: center;
    justify-content: center;
    height: 100vh;
@@ -15,6 +16,13 @@
    background-color: #2b2b2b;
    color: #ffffff;
    font-family: Arial, sans-serif;
+  }
+
+  .text-block {
+   font-size: 28px;
+   font-weight: bold;
+   text-align: center;
+   margin-bottom: 20px;
   }
 
   button {
@@ -26,16 +34,28 @@
    transform: scale(3);
   }
 
-  .title {
-   font-size: 28px;
-   font-weight: bold;
-   text-align: center;
-   margin-bottom: 20px;
+  @media screen and (max-width: 640px) {
+   body {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    padding: 20px;
+   }
+
+   .text-block {
+    font-size: 24px;
+    margin-bottom: 10px;
+   }
+
+   button {
+    font-size: 24px;
+    padding: 10px 20px;
+    transform: scale(2);
+   }
   }
  </style>
 </head>
 <body>
- <div class="title">ВСЁ СДЕЛАЛА НЕЙРОСЕТЬ</div>
+ <div class="text-block">ВСЁ СДЕЛАЛА НЕЙРОСЕТЬ</div>
  <button onclick="playMusic()">ЛЮТЫЙ ФОНК</button>
 
  <audio id="music" preload="auto">
@@ -49,4 +69,4 @@
    }
  </script>
 </body>
-</html>
+</html> 
