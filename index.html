@@ -59,16 +59,33 @@
 <body>
  <div class="text-block">ВСЁ СДЕЛАЛА НЕЙРОСЕТЬ</div>
  <button onclick="playMusic()">ЛЮТЫЙ ФОНК</button>
-
  <audio id="music" preload="auto">
-   <source src="https://ruo.morsmusic.org/load/2133629316/OMFG_-_Hello_(musmore.com).mp3" type="audio/mpeg">
+  <source src="https://ruo.morsmusic.org/load/2133629316/OMFG_-_Hello_(musmore.com).mp3" type="audio/mpeg">
  </audio>
-
+ <div>
+  <input type="range" id="seek-bar" value="0">
+ </div>
  <script>
-   function playMusic() {
-     var music = document.getElementById("music");
-     music.play();
-   }
+  function playMusic() {
+   var music = document.getElementById("music");
+   var seekBar = document.getElementById("seek-bar");
+
+   music.play();
+
+   music.addEventListener("timeupdate", function() {
+    var duration = music.duration;
+    var currentTime = music.currentTime;
+
+    seekBar.value = currentTime / duration * 100;
+   });
+
+   seekBar.addEventListener("change", function() {
+    var duration = music.duration;
+    var currentTime = seekBar.value / 100 * duration;
+
+    music.currentTime = currentTime;
+   });
+  }
  </script>
 </body>
 </html>
