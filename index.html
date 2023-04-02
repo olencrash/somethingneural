@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Пример страницы с кнопкой ФОНК</title>
+</head>
+<body>
+<h1>Музыкальная страница</h1>
+<button onclick="playMusic()">ФОНК</button>
+<audio id="myAudio">
+  <source src="/storage/emulated/0/Music/BORNEDO - Sick Phonk.mp3" type="audio/mpeg">
+</audio>
+<script>
+  var audio = document.getElementById("myAudio");
+  function playMusic() {
+   if (audio.paused) {
+     audio.play();
+     } else {
+     audio.pause();
+     }
+  }
+</script>
+</body>
+</html>
