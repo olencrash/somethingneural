@@ -1,23 +1,23 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-<title>Пример страницы с кнопкой ФОНК</title>
+<title>Запуск музыки по кнопке</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<h1>НАЖМИ НА КНОПКУ И БУДЕТ ЕБЕЙШИЙ ФОНК</h1>
-<button onclick="playMusic()">ПОГНАЛИ НАХУЙ ЕЕЕ ФОНК</button>
-<audio id="myAudio">
-  <source src="https://ruo.morsmusic.org/load/2133629316/OMFG_-_Hello_(musmore.com).mp3" type="audio/mpeg">
+<button onclick="playMusic()">Воспроизвести музыку</button>
+
+<audio id="music" preload="auto">
+   <source src="https://ruo.morsmusic.org/load/2133629316/OMFG_-_Hello_(musmore.com).mp3" type="audio/mpeg">
 </audio>
+
 <script>
-  var audio = document.getElementById("myAudio");
-  function playMusic() {
-   if (audio.paused) {
-     audio.play();
-     } else {
-     audio.pause();
-     }
-  }
+   function playMusic() {
+     var music = document.getElementById("music");
+     music.play();
+   }
 </script>
 </body>
 </html>
