@@ -69,6 +69,9 @@
   #seek-bar {
    width: 100%;
    margin-top: 30px;
+   position: absolute;
+   left: 0;
+   bottom: -30px; /* расположение ползунка под кнопкой ЛЮТЫЙ ФОНК */
   }
 
   .pause-button {
@@ -77,8 +80,9 @@
    color: #2b2b2b;
    border-color: #ffffff;
    padding: 10px 20px;
-   margin-top: -10px;
-   margin-left: 50%;
+   position: absolute;
+   left: 50%; /* расположение кнопки по центру контейнера */
+   bottom: -60px; /* расстояние между кнопками */
    transform: translateX(-50%) scale(0.5);
   }
  </style>
