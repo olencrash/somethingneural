@@ -71,7 +71,7 @@
     margin-top: 50px; /* переместили ползунок выше */
     position: absolute;
     left: 0;
-    bottom: -20px; /* уменьшили расстояние до кнопки ПАУЗА */
+    bottom: -90px; /* изменено значение */
   }
 
   .pause-button {
@@ -85,6 +85,16 @@
     bottom: 20px; /* переместили кнопку выше */
     transform: translateX(-50%) scale(0.5);
   }
+
+  #tg-block {
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    position: absolute;
+    left: 50%; /* расположение блока по центру контейнера */
+    bottom: -120px; /* переместили блок ниже */
+    transform: translateX(-50%);
+  }
 </style>
 </head>
 <body>
@@ -95,6 +105,7 @@
 </audio>
 <input type="range" id="seek-bar" value="0">
 <button class="pause-button" onclick="pauseMusic()">ПАУЗА</button>
+<div id="tg-block">tg: megachad88</div> <!-- добавлен блок с текстом tg: megachad88 -->
 <script>
   function playMusic() {
     var music = document.getElementById("music");
