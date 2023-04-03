@@ -1,12 +1,11 @@
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>Выбирайте ТЯГЕ СУКО БАРХРАНТЫЕ ПОНЕЛ ЕЖЖИ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/styletyagi.css">
-    <style>
         button {
-            background-color: #f5f5dc; /* изменено */
+            background-color: #f5f5dc !important;
             color: black;
             display: block;
             margin-bottom: 70px;
@@ -15,7 +14,7 @@
             border: none;
         }
         audio {
-            background-color: #f5f5dc; /* изменено */
+            background-color: #f5f5dc !important;
             color: black;
             display: block;
             margin-bottom: 70px;
@@ -24,7 +23,6 @@
             border: none;
             cursor: pointer;
         }
-        /* добавлено */
         .main-button {
             position: absolute;
             top: 400px;
@@ -39,13 +37,14 @@
   <body>
     <h1>ТЯГЕ СУКО БАРХРАНТЫЕ ВЫБЕРАЙ ПОНЕЛ ЕЖЖИ</h1>
 
-    <button class="first">КЕФТЕМЕ НА СВЯЗЬ</button>
-    <button class="second">ПАШЛА НАХИР ДУРО</button>
-    <button class="third">Я СТУЧУ ПО ПАПАПЕПЕ</button>
-    <button class="fourth">КЕРИЛ ЛОХАНКА И РЕЗЕРУАР МОЧИ ПНХ</button>
-    <button class="fifth">Я ПОДДЕРЖИВАЮ ПОЛИЦИЮ РФ</button>
+    <button class="first">КЕФТЕМЕ НА СВЯЗЬ</button>
+    <button class="second">ПАШЛА НАХИР ДУРО</button>
+    <button class="third">Я СТУЧУ ПО ПАПАПЕПЕ</button>
+    <button class="fourth">КЕРИЛ ЛОХАНКА И РЕЗЕРУАР МОЧИ ПНХ</button>
+    <button class="fifth">Я ПОДДЕРЖИВАЮ ПОЛИЦИЮ РФ</button>
     <audio id="player" src="https://github.com/olencrash/somethingneural/raw/1a781afb5b9c63b3dbcc64370c1c44cb015f857a/keftemecall.mp3"></audio>
-    <button class="main-button" onclick="window.location.href='index.html'">НА ГЛАВНУЮ</button> <!-- добавлено -->
+    <button class="main-button" onclick="location.href='index.html';">НА ГЛАВНУЮ</button>
+
     <script>
   const firstButton = document.querySelector('.first');
   const player = document.getElementById('player');
@@ -68,6 +67,6 @@
     isPlaying = false;
     player.currentTime = 0;
   });
-</script>
+    </script>
   </body>
 </html>
