@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/styletyagi.css">
     <style>
         button {
-            background-color: beige;
+            background-color: #f5f5dc; /* изменено */
             color: black;
             display: block;
             margin-bottom: 70px;
@@ -15,7 +15,7 @@
             border: none;
         }
         audio {
-            background-color: beige;
+            background-color: #f5f5dc; /* изменено */
             color: black;
             display: block;
             margin-bottom: 70px;
@@ -23,6 +23,16 @@
             padding: 10px;
             border: none;
             cursor: pointer;
+        }
+        /* добавлено */
+        .main-button {
+            position: absolute;
+            top: 400px;
+            left: 50px;
+            background-color: #f5f5dc;
+            color: black;
+            padding: 10px;
+            border: none;
         }
     </style>
   </head>
@@ -35,6 +45,7 @@
     <button class="fourth">КЕРИЛ ЛОХАНКА И РЕЗЕРУАР МОЧИ ПНХ</button>
     <button class="fifth">Я ПОДДЕРЖИВАЮ ПОЛИЦИЮ РФ</button>
     <audio id="player" src="https://github.com/olencrash/somethingneural/raw/1a781afb5b9c63b3dbcc64370c1c44cb015f857a/keftemecall.mp3"></audio>
+    <button class="main-button" onclick="window.location.href='index.html'">НА ГЛАВНУЮ</button> <!-- добавлено -->
     <script>
   const firstButton = document.querySelector('.first');
   const player = document.getElementById('player');
