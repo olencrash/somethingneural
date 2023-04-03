@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Моя страница</title>
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <style>
+<title>Моя страница</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
   body {
    background-image: url("https://raw.githubusercontent.com/olencrash/somethingneural/0f01014ebb0ca37c702baf35bd1d7ba1ccfdf622/tyagibackground.png");
    background-repeat: repeat;
@@ -99,50 +99,48 @@
    cursor: pointer;
    width: 100%;
   }
- </style>
+  .volume-control {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+  }
+</style>
 </head>
 <body>
- <a href="index.html" class="button" style="font-size: 6vw;">ВЕРНИ МЕНЯ НАЗАД СЦУКО МОЧА</a>
- <div class="button-container left-buttons">
+<a href="index.html" class="button" style="font-size: 6vw;">ВЕРНИ МЕНЯ НАЗАД СЦУКО МОЧА</a>
+<div class="button-container left-buttons">
   <button class="button-1" style="font-size: 4.5vw;">кефтеме на связи</button>
   <button class="button-3" style="font-size: 4.5vw;">негры голодают</button>
- </div>
- <div class="button-container right-buttons" style="text-align: right;">
+</div>
+<div class="button-container right-buttons" style="text-align: right;">
   <button class="button-2" style="font-size: 4.5vw;">фонк про пиньинь</button>
   <button class="button-4" style="font-size: 4.5vw;">сука не жми уеба</button>
- </div>
- <script>
+</div>
+<input type="range" class="volume-control">
+<script>
   const button1 = document.querySelector('.button-1');
   
   const audio = new Audio('https://github.com/olencrash/somethingneural/raw/main/keftemecall.mp3');
   
-  let volumeControl;
+  let volumeControl = document.querySelector('.volume-control');
   
   button1.addEventListener('click', () => {
     if (audio.paused) {
       audio.play();
       
-      if (volumeControl) {
-        volumeControl.style.display = 'block';
-      } else {
-        volumeControl = document.createElement('input');
-        volumeControl.setAttribute('type', 'range');
-        volumeControl.setAttribute('min', '0');
-        volumeControl.setAttribute('max', '1');
-        volumeControl.setAttribute('step', '0.1')
-        
-        volumeControl.addEventListener('input', () => {
-          audio.volume = volumeControl.value;
-        });
-        
-        const buttonContainer = document.querySelector('.button-container');
-        buttonContainer.parentNode.insertBefore(volumeControl, buttonContainer.nextSibling);
-      }
+      volumeControl.style.display = 'block';
     } else {
       audio.pause();
       
       volumeControl.style.display = 'none';
     }
+  });
+  
+  volumeControl.addEventListener('input', () => {
+    audio.volume = volumeControl.value;
   });
 </script>
 </body>
