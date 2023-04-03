@@ -1,51 +1,61 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Выбирайте ТЯГЕ СУКО БАРХРАНТЫЕ ПОНЕЛ ЕЖЖИ</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/styletyagi.css">
-    <style>
-        button {
-            background-color: beige;
-            color: black;
-            display: block;
-            margin-bottom: 70px;
-            text-align: left;
-            padding: 10px;
-            border: none;
-        }
-    </style>
-  </head>
-  <body>
-    <h1>ТЯГЕ СУКО БАРХРАНТЫЕ ВЫБЕРАЙ ПОНЕЛ ЕЖЖИ</h1>
+  <head>
+    <title>Выбирайте ТЯГЕ СУКО БАРХРАНТЫЕ ПОНЕЛ ЕЖЖИ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/styletyagi.css">
+    <style>
+        button {
+            background-color: beige;
+            color: black;
+            display: block;
+            margin-bottom: 70px;
+            text-align: left;
+            padding: 10px;
+            border: none;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>ТЯГЕ СУКО БАРХРАНТЫЕ ВЫБЕРАЙ ПОНЕЛ ЕЖЖИ</h1>
 
-    <button class="first">КЕФТЕМЕ НА СВЯЗЬ</button>
-    <button class="second">ПАШЛА НАХИР ДУРО</button>
-    <button class="third">Я СТУЧУ ПО ПАПАПЕПЕ</button>
-    <button class="fourth">КЕРИЛ ЛОХАНКА И РЕЗЕРУАР МОЧИ ПНХ</button>
-    <button class="fifth">Я ПОДДЕРЖИВАЮ ПОЛИЦИЮ РФ</button>
-    <script>
-  const firstButton = document.querySelector('.first');
-  const audio = new Audio('https://github.com/olencrash/somethingneural/raw/main/keftemecall.mp3');
+    <button class="first">КЕФТЕМЕ НА СВЯЗЬ</button>
+    <button class="second">ПАШЛА НАХИР ДУРО</button>
+    <button class="third">Я СТУЧУ ПО ПАПАПЕПЕ</button>
+    <button class="fourth">КЕРИЛ ЛОХАНКА И РЕЗЕРУАР МОЧИ ПНХ</button>
+    <button class="fifth">Я ПОДДЕРЖИВАЮ ПОЛИЦИЮ РФ</button>
+    <script>
+  const firstButton = document.querySelector('.first');
+  const audio = new Audio('https://github.com/olencrash/somethingneural/blob/1a781afb5b9c63b3dbcc64370c1c44cb015f857a/keftemecall.mp3');
 
-  let isPlaying = false;
+  let isPlaying = false;
 
-  firstButton.addEventListener('click', () => {
-    if (!isPlaying) {
-      audio.play();
-      isPlaying = true;
-      const player = document.createElement('audio');
-      player.src = 'https://github.com/olencrash/somethingneural/blob/1a781afb5b9c63b3dbcc64370c1c44cb015f857a/keftemecall.mp3';
-      player.controls = true;
-      player.style.marginTop = '10px';
-      firstButton.parentNode.insertBefore(player, firstButton.nextSibling);
-    } else {
-      audio.pause();
-      isPlaying = false;
-      const player = document.querySelector('audio');
-      player.parentNode.removeChild(player); 
-    }
-  });
+  firstButton.addEventListener('click', () => {
+    if (!isPlaying) {
+      audio.play();
+      isPlaying = true;
+      const player = document.createElement('audio');
+      player.src = 'https://github.com/olencrash/somethingneural/blob/1a781afb5b9c63b3dbcc64370c1c44cb015f857a/keftemecall.mp3';
+      player.controls = true;
+      player.style.marginTop = '10px';
+      player.volume = 0.5; // устанавливаем громкость в половину от максимальной
+      firstButton.parentNode.insertBefore(player, firstButton.nextSibling);
+      audio.addEventListener('timeupdate', () => {
+        player.currentTime = audio.currentTime; // обновляем текущую позицию воспроизведения
+      });
+      player.addEventListener('play', () => {
+        audio.play();
+      });
+      player.addEventListener('pause', () => {
+        audio.pause();
+      });
+    } else {
+      audio.pause();
+      isPlaying = false;
+      const player = document.querySelector('audio');
+      player.parentNode.removeChild(player); 
+    }
+  });
 </script>
-  </body>
+  </body>
 </html>
