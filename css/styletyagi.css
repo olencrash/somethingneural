@@ -1,0 +1,26 @@
+body {
+  background-image: url("https://github.com/olencrash/somethingneural/raw/main/tyagibackground.png");
+  background-size: 100% auto;
+  background-repeat: repeat;
+  background-position: bottom bottom;
+  color: white;
+  font-size: 5px;
+  font-weight: bold;
+  text-align: center;
+  padding: 1px;
+}
+
+h1 {
+  margin-top: 0;
+
+  /* добавляем стили для кнопок */
+  button {
+    display: block; /* каждая кнопка на новой строке */
+    margin-bottom: 70px; /* отступ между кнопками */
+    margin-left: 0; /* сбрасываем отступ слева */
+    background-color:#f5f5dc; /* цвет фона кнопки */
+    color: #000000; /* цвет текста кнопки */
+    padding: 10px; /* отступ внутри кнопки */
+    border: none; /* убираем границу */
+    border-radius: 5px; /* скругляем уголки */
+  }
