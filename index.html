@@ -107,6 +107,31 @@
     bottom: 50px; /* переместили кнопку выше */
     transform: translateX(-50%) scale(0.5);
   }
+
+  .chat-button {
+    font-size: 24px;
+    background-color: #f5f5dc;
+    color: #2b2b2b;
+    border-color: #ffffff;
+    padding: 10px 20px;
+    position: absolute;
+    right: -70px; /* переместили кнопку вправо */
+    bottom: 270px; /* переместили кнопку выше */
+    transform: scale(0.5);
+  }
+  
+  .kefteme-button {
+    font-size: 24px;
+    background-color: #f5f5dc;
+    color: #2b2b2b;
+    border-color: #ffffff;
+    padding: 10px 20px;
+    position: absolute;
+    left: -65px;
+    bottom: 270px;
+    transform: scale(0.5);
+  }
+  
 </style>
 </head>
 <body>
@@ -117,7 +142,10 @@
 </audio>
 <input type="range" id="seek-bar" value="0">
 <button class="pause-button" onclick="pauseMusic()">ПАУЗА</button>
+<button class="kefteme-button"
+onclick="location.href'somethingneural/tyagi. html'">хуйня и хуй знает шо</button>
 <button class="back-button" onclick="goBack()">НАЗАД</button>
+<button class="chat-button">ЧАТИК (в разработке)</button>
 <div id="tg-block">tg: megachad88</div>
 <script>
   function playMusic() {
@@ -151,6 +179,10 @@
     var music = document.getElementById("music");
     music.currentTime -= 10;
   }
+
+  document.querySelector('.chat-button').addEventListener('click', function() {
+    alert('Чатик в разработке.');
+  });
 </script>
 </body>
 </html>
