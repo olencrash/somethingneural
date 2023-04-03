@@ -100,6 +100,40 @@
    width: 100%;
   }
  </style>
+ 
+ <script>
+  const button1 = document.querySelector('.button-1');
+  
+  const audio = new Audio('https://github.com/olencrash/somethingneural/raw/main/keftemecall.mp3');
+  
+  let volumeControl;
+  
+  button1.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      
+      if (volumeControl) {
+        volumeControl.style.display = 'block';
+      } else {
+        volumeControl = document.createElement('input');
+        volumeControl.setAttribute('type', 'range');
+        volumeControl.setAttribute('min', '0');
+        volumeControl.setAttribute('max', '1');
+        volumeControl.setAttribute('step', '0.1');
+                       volumeControl.addEventListener('input', () => {
+          audio.volume = volumeControl.value;
+        });
+        
+        const buttonContainer = document.querySelector('.button-container');
+        buttonContainer.parentNode.insertBefore(volumeControl, buttonContainer.nextSibling);
+      }
+    } else {
+      audio.pause();
+      
+      volumeControl.style.display = 'none';
+    }
+  });
+</script>
 </head>
 <body>
  <a href="index.html" class="button" style="font-size: 6vw;">ВЕРНИ МЕНЯ НАЗАД СЦУКО МОЧА</a>
