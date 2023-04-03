@@ -1,72 +1,115 @@
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Выбирайте ТЯГЕ СУКО БАРХРАНТЫЕ ПОНЕЛ ЕЖЖИ</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-        button {
-            background-color: #f5f5dc !important;
-            color: black;
-            display: block;
-            margin-bottom: 70px;
-            text-align: left;
-            padding: 10px;
-            border: none;
-        }
-        audio {
-            background-color: #f5f5dc !important;
-            color: black;
-            display: block;
-            margin-bottom: 70px;
-            text-align: left;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-        }
-        .main-button {
-            position: absolute;
-            top: 400px;
-            left: 50px;
-            background-color: #f5f5dc;
-            color: black;
-            padding: 10px;
-            border: none;
-        }
-    </style>
-  </head>
-  <body>
-    <h1>ТЯГЕ СУКО БАРХРАНТЫЕ ВЫБЕРАЙ ПОНЕЛ ЕЖЖИ</h1>
-
-    <button class="first">КЕФТЕМЕ НА СВЯЗЬ</button>
-    <button class="second">ПАШЛА НАХИР ДУРО</button>
-    <button class="third">Я СТУЧУ ПО ПАПАПЕПЕ</button>
-    <button class="fourth">КЕРИЛ ЛОХАНКА И РЕЗЕРУАР МОЧИ ПНХ</button>
-    <button class="fifth">Я ПОДДЕРЖИВАЮ ПОЛИЦИЮ РФ</button>
-    <audio id="player" src="https://github.com/olencrash/somethingneural/raw/1a781afb5b9c63b3dbcc64370c1c44cb015f857a/keftemecall.mp3"></audio>
-    <button class="main-button" onclick="location.href='index.html';">НА ГЛАВНУЮ</button>
-
-    <script>
-  const firstButton = document.querySelector('.first');
-  const player = document.getElementById('player');
-
-  let isPlaying = false;
-
-  firstButton.addEventListener('click', () => {
-    if (!isPlaying) {
-      player.play();
-      isPlaying = true;
-      player.controls = true;
-      player.volume = 0.5;
-      player.currentTime = 0;
-    } else {
-      player.pause();
-      isPlaying = false;
-    }
-  });
-  player.addEventListener('pause', () => {
-    isPlaying = false;
-    player.currentTime = 0;
-  });
-    </script>
-  </body>
+<head>
+ <title>Моя страница</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <style>
+  body {
+   background-image: url("https://raw.githubusercontent.com/olencrash/somethingneural/0f01014ebb0ca37c702baf35bd1d7ba1ccfdf622/tyagibackground.png");
+   background-repeat: repeat;
+   background-size: 100% auto;
+   background-position: top;
+  }
+  .button {
+   display: block;
+   margin: auto;
+   background-color: beige;
+   color: black;
+   padding: 2% 4%;
+   text-align: center;
+   text-decoration: none;
+   font-size: 3vw;
+   border: none;
+   cursor: pointer;
+  }
+  
+  .button-1 {
+   display: block;
+   margin-top: 12%;
+   background-color: beige;
+   color: black;
+   padding: 2% 4%;
+   text-align: middle;
+   text-decoration: none;
+   font-size: 1.5vw;
+   border: none;
+   cursor: pointer;
+  }
+  
+  .beige-button:not(:first-child) {
+   margin-top: 10%;
+  }
+  
+  .left-buttons {
+   float: left;
+  }
+  
+  .right-buttons {
+   float: right;
+  }
+  
+  .button-container {
+   display: inline-block;
+   vertical-align: middle;
+   width: 35%;
+  }
+  
+  .button-container.small-height {
+   height: 40%;
+  }
+  
+  .button-2 {
+   display: block;
+   margin-top: 12%;
+   margin-left: 0%;
+   background-color: beige;
+   color: black;
+   padding: 2% 4%;
+   text-align: middle;
+   text-decoration: none;
+   border: none;
+   cursor: pointer;
+   width: 100%;
+   font-size: 1.5vw;
+  } 
+  
+  .button-3 {
+   margin-top: 12%;
+   background-color: beige;
+   color: black;
+   padding: 2% 4%;
+   text-align: middle;
+   text-decoration: none;
+   font-size: 1.5vw;
+   border: none;
+   cursor: pointer;
+  }
+  
+  .button-4 {
+  display: block;
+   margin-top: 12%;
+   margin-left: 0%;
+   background-color: beige;
+   color: black;
+   padding: 2% 4%;
+   text-align: middle;
+   text-decoration: none;
+   font-size: 1.5vw;
+   border: none;
+   cursor: pointer;
+   width: 100%;
+  }
+ </style>
+</head>
+<body>
+ <a href="index.html" class="button" style="font-size: 6vw;">ВЕРНИ МЕНЯ НАЗАД СЦУКО МОЧА</a>
+ <div class="button-container left-buttons">
+  <button class="button-1" style="font-size: 4.5vw;">кефтеме на связи</button>
+  <button class="button-3" style="font-size: 4.5vw;">негры голодают</button>
+ </div>
+ <div class="button-container right-buttons" style="text-align: right;">
+  <button class="button-2" style="font-size: 4.5vw;">фонк про пиньинь</button>
+  <button class="button-4" style="font-size: 4.5vw;">сука не жми уеба</button>
+ </div>
+</body>
 </html>
