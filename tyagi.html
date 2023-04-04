@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -110,52 +109,7 @@
     display: none;
   }
 </style>
-<script>
-var audio1 = new Audio('https://github.com/olencrash/somethingneural/blob/9edb09d53c9430148840aa3cb5b5c5b4236452d9/keftemecall.mp3');
-var audio3 = new Audio('https://github.com/olencrash/somethingneural/blob/9edb09d53c9430148840aa3cb5b5c5b4236452d9/zvuk_ponos.mp3');
-var audio2 = new Audio('https://github.com/olencrash/somethingneural/blob/9edb09d53c9430148840aa3cb5b5c5b4236452d9/spermorukav.mp3');
-var audio4 = new Audio('https://github.com/olencrash/somethingneural/blob/9edb09d53c9430148840aa3cb5b5c5b4236452d9/mamka.mp3');
-document.querySelector(".button-1").addEventListener("click", function() {
-  if (audio1.paused) {
-    audio1.play();
-  } else {
-    audio1.pause();
-  }
-  audio2.pause(); 
-  audio3.pause();
-  audio4.pause();
-});
-document.querySelector(".button-2").addEventListener("click", function() {
-  if (audio2.paused) {
-    audio2.play();
-  } else {
-    audio2.pause();
-  }
-  audio1.pause(); // остановка воспроизведения других аудио
-  audio3.pause();
-  audio4.pause();
-});
-document.querySelector(".button-3").addEventListener("click", function() {
-  if (audio3.paused) {
-    audio3.play();
-  } else {
-    audio3.pause();
-  }
-  audio1.pause(); // остановка воспроизведения других аудио
-  audio2.pause();
-  audio4.pause();
-});
-document.querySelector(".button-4").addEventListener("click", function() {
-  if (audio4.paused) {
-    audio4.play();
-  } else {
-    audio4.pause();
-  }
-  audio1.pause(); // остановка воспроизведения других аудио
-  audio2.pause();
-  audio3.pause();
-});
-</script>
+
 </head>
 <body>
 <a href="index.html" class="button" style="font-size: 6vw;">ВЕРНИ МЕНЯ НАЗАД СЦУКО МОЧА</a>
@@ -166,6 +120,11 @@ document.querySelector(".button-4").addEventListener("click", function() {
 <div class="button-container right-buttons" style="text-align: right;">
   <button class="button-2" style="font-size: 4.5vw;">фонк про пиньинь</button>
   <button class="button-4" style="font-size: 4.5vw;">сука не жми уеба</button>
+<button class="button-3" onclick="playMusic()">ЛЮТЫЙ ФОНК</button>
+<audio id="music" preload="auto">
+  <source src="https://ruo.morsmusic.org/load/2133629316/OMFG_-_Hello_(musmore.com).mp3" type="audio/mpeg">
+</audio>
+</audio>
 </div>
 </body>
 </html>
