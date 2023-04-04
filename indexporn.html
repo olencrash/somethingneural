@@ -1,1 +1,212 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+<title>порноговнище</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("https://github.com/olencrash/somethingneural/raw/main/indexporn.png");
+    background-size: cover;
+    background-position: center center;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+  }
+
+.pornmode-link {
+  position: absolute;
+  left: 45%;
+  bottom: 89%;
+  display: inline-block;
+  padding: 2.94% 5.88%;
+  background-color: beige;
+  color: black;
+  text-decoration: none;
+  border: none;
+  border-radius: 2vw;
+  font-size: 5vw;
+  transform: scale(0.7);
+  width: calc(100% + 1.96%);
+  width: 50%;
+  text-align: center;
+}.
+
+  .text-block {
+    font-size: 4.44vw;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2.22vh;
+  }
+
+  button {
+    font-size: 6.66vw;
+    background-color: orange;
+    color: #2b2b2b;
+    border-color: white;
+    padding: 2.22vh 4.44vw;
+    transform: scale(1.5);
+  }
+
+  @media screen and (max-width: 640px) {
+    body {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+      padding: 2.22vh;
+    }
+
+    .text-block {
+      font-size: 3.33vw;
+      margin-bottom: 1.11vh;
+    }
+
+    button {
+      font-size: 3.33vw;
+      padding: 1.11vh 2.22vw;
+      transform: scale(1.2);
+    }
+
+    .pause-button {
+      font-size: 1.44vw;
+      padding: 0.55vh 1.11vw;
+      margin-top: 1.11vh;
+      transform: scale(0.5);
+    }
+
+    #seek-bar {
+      margin-top: 1.11vh;
+    }
+  }
+
+  #seek-bar {
+    width: 100%;
+    margin-top: 5.55vh;
+    position: absolute;
+    left: 0;
+    bottom: 20.33vh;
+  }
+
+  .pause-button {
+    font-size: 3.33vw;
+    background-color: orange;
+    color: #2b2b2b;
+    border-color: #000;
+    padding: 1.11vh 2.22vw;
+    position: absolute;
+    left: 80vw;
+    bottom: 10.78vh;
+    transform: translateX(-50%) scale(1.3);
+    width: 25vw;
+  }
+  
+  .kefteme-link {
+    font-size: 3.33vw;
+    background-color: orange;
+    color: #2b2b2b;
+    border-color: white;
+    padding: 1.11vh 2.22vw;
+    position: absolute;
+    left: 1.20vh;
+    bottom: 50.50vh;
+    transform: scale(1.06);
+    width: 40vw;
+    text-align: center;
+  }
+
+  #tg-block {
+    color: #ffffff;
+    font-size: 1.11vw;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    bottom: 0.56vh;
+    transform: translateX(-50%);
+  }
+
+  .back-button {
+    font-size: 3.33vw;
+    background-color: orange;
+    color: #2b2b2b;
+    border-color: #000000;
+    padding: 1.11vh 2.22vw;
+    position: absolute;
+    left: 20vw;
+    bottom: 10.78vh;
+    transform: translateX(-50%) scale(1.3);
+    width: 25vw;
+  }
+
+  .chat-button {
+    font-size: 3.33vw;
+    background-color: orange;
+    color: #2b2b2b;
+    border-color: orange;
+    padding: 1.11vh 2.22vw;
+    position: absolute;
+    right: -1vh;
+    bottom: 50.20vh;
+    transform: scale(0.9);
+    width: 53vw;
+  }
+  
+</style>
+</head>
+<body>
+<div class="text-block">ВЫ В ПИЗДЕ ХОХОХ</div>
+<button onclick="playMusic()">СТОНЫ ТВОЕЙ СЕСТРЫ</button>
+<audio id="music" preload="auto">
+  <source src="https://ruo.morsmusic.org/load/2133629316/OMFG_-_Hello_(musmore.com).mp3" type="audio/mpeg">
+</audio>
+<input type="range" id="seek-bar" value="0">
+<a class="kefteme-link" href="tyagiporn.html">ФЕТИШ </a>
+<a class="pornmode-link" href="index.html">СТЯНУТЬ ГОНДОН (ты хуйлапан) </a>
+<button class="pause-button" onclick="pauseMusic()">КОНЧИТЬ<br>(в мамку)</button>
+<button class="back-button" onclick="goBack()">ВЫТАЩИТЬ<br>(невовремя)</button>
+<button class="chat-button">ВЕБКАМ (в процессе ебли)</button>
+<div id="tg-block">tg: megachad88</div>
+<script>
+  function playMusic() {
+    var music = document.getElementById("music");
+    var seekBar = document.getElementById("seek-bar");
+
+    music.play();
+
+    music.addEventListener("timeupdate", function() {
+      var duration = music.duration;
+      var currentTime = music.currentTime;
+
+      seekBar.value = currentTime / duration * 100;
+    });
+
+    seekBar.addEventListener("change", function() {
+      var duration = music.duration;
+      var currentTime = seekBar.value / 100 * duration;
+
+      music.currentTime = currentTime;
+    });
+  }
+
+  function pauseMusic() {
+    var music = document.getElementById("music");
+
+    music.pause();
+  }
+
+  function goBack() {
+    var music = document.getElementById("music");
+    music.currentTime -= 10;
+  }
+
+  document.querySelector('.chat-button').addEventListener('click', function() {
+    alert('Чатик в разработке.');
+  });
+</script>
+</body>
+</html>
