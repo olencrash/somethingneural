@@ -99,6 +99,7 @@
    cursor: pointer;
    width: 100%;
   }
+  
   .volume-control {
     position: fixed;
     bottom: 0;
@@ -108,86 +109,52 @@
     display: none;
   }
 </style>
-<input type="range" class="volume-control" min="0" max="1" step="0.1">
-  <script>
-    const button1 = document.querySelector('.button-1');
-    const audio1 = new Audio('https://github.com/olencrash/somethingneural/raw/main/keftemecall.mp3');
-    const volumeControl1 = document.querySelector('.volume-control-1');
-
-    button1.addEventListener('click', () => {
-      if (audio1.paused) {
-        audio1.play();
-        volumeControl1.style.display = 'block';
-      } else {
-        audio1.pause();
-        volumeControl1.style.display = 'none';
-      }
-    });
-
-    volumeControl1.addEventListener('input', () => {
-      audio1.volume = volumeControl1.value;
-    });
-  </script>
-
-  <script>
-    const button2 = document.querySelector('.button-2');
-    const audio2 = new Audio('https://github.com/olencrash/somethingneural/raw/main/spermorukav.mp3');
-    const volumeControl2 = document.querySelector('.volume-control-2');
-
-    button2.addEventListener('click', () => {
-      if (audio2.paused) {
-        audio2.play();
-        volumeControl2.style.display = 'block';
-      } else {
-        audio2.pause();
-        volumeControl2.style.display = 'none';
-      }
-    });
-
-    volumeControl2.addEventListener('input', () => {
-      audio2.volume = volumeControl2.value;
-    });
-  </script>
-
-  <script>
-    const button3 = document.querySelector('.button-3');
-    const audio3 = new Audio('https://github.com/olencrash/somethingneural/raw/main/zvuk_ponos.mp3');
-    const volumeControl3 = document.querySelector('.volume-control-3');
-
-    button3.addEventListener('click', () => {
-      if (audio3.paused) {
-        audio3.play();
-        volumeControl3.style.display = 'block';
-      } else {
-        audio3.pause();
-        volumeControl3.style.display = 'none';
-      }
-    });
-
-    volumeControl3.addEventListener('input', () => {
-      audio3.volume = volumeControl3.value;
-    });
-  </script>
-
-  <script>
-    const button4 = document.querySelector('.button-4');
-    const audio4 = new Audio('https://github.com/olencrash/somethingneural/raw/main/mamka.mp3');
-    const volumeControl4 = document.querySelector('.volume-control-4');
-
-    button4.addEventListener('click', () => {
-      if (audio4.paused) {
-        audio4.play();
-        volumeControl4.style.display = 'block';
-      } else {
-        audio4.pause();
-        volumeControl4.style.display = 'none';
-      }
-    });
-
-    volumeControl4.addEventListener('input', () => {
-      audio4.volume = volumeControl4.value;
-    });
-  </script>
+<script>
+var audio1 = new Audio('https://github.com/olencrash/somethingneural/raw/main/keftemecall.mp3');
+var audio2 = new Audio('https://github.com/olencrash/somethingneural/raw/main/spermorukav.mp3');
+var audio3 = new Audio('https://github.com/olencrash/somethingneural/raw/main/zvuk_ponos.mp3');
+var audio4 = new Audio('https://github.com/olencrash/somethingneural/raw/main/mamka.mp3');
+document.querySelector(".button-1").addEventListener("click", function() {
+  if (audio1.paused) {
+    audio1.play();
+  } else {
+    audio1.pause();
+  }
+  audio2.pause(); // остановка воспроизведения других аудио
+  audio3.pause();
+  audio4.pause();
+});
+document.querySelector(".button-2").addEventListener("click", function() {
+  if (audio2.paused) {
+    audio2.play();
+  } else {
+    audio2.pause();
+  }
+  audio1.pause(); // остановка воспроизведения других аудио
+  audio3.pause();
+  audio4.pause();
+});
+document.querySelector(".button-3").addEventListener("click", function() {
+  if (audio3.paused) {
+    audio3.play();
+  } else {
+    audio3.pause();
+  }
+  audio1.pause(); // остановка воспроизведения других аудио
+  audio2.pause();
+  audio4.pause();
+});
+document.querySelector(".button-4").addEventListener("click", function() {
+  if (audio4.paused) {
+    audio4.play();
+  } else {
+    audio4.pause();
+  }
+  audio1.pause(); // остановка воспроизведения других аудио
+  audio2.pause();
+  audio3.pause();
+});
+</script>
 </head>
 <body>
 <a href="index.html" class="button" style="font-size: 6vw;">ВЕРНИ МЕНЯ НАЗАД СЦУКО МОЧА</a>
