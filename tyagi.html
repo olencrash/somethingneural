@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -110,17 +111,17 @@
   }
 </style>
 <script>
-var audio1 = new Audio('https://github.com/olencrash/somethingneural/raw/main/keftemecall.mp3');
-var audio2 = new Audio('https://github.com/olencrash/somethingneural/raw/main/spermorukav.mp3');
-var audio3 = new Audio('https://github.com/olencrash/somethingneural/raw/main/zvuk_ponos.mp3');
-var audio4 = new Audio('https://github.com/olencrash/somethingneural/raw/main/mamka.mp3');
+var audio1 = new Audio('https://cdn.rawgit.com/olencrash/somethingneural/main/keftemecall.mp3');
+var audio2 = new Audio('https://cdn.rawgit.com/olencrash/somethingneural/main/spermorukav.mp3');
+var audio3 = new Audio('https://cdn.rawgit.com/olencrash/somethingneural/main/zvuk_ponos.mp3');
+var audio4 = new Audio('https://cdn.rawgit.com/olencrash/somethingneural/main/mamka.mp3');
 document.querySelector(".button-1").addEventListener("click", function() {
   if (audio1.paused) {
     audio1.play();
   } else {
     audio1.pause();
   }
-  audio2.pause(); // остановка воспроизведения других аудио
+  audio2.pause(); 
   audio3.pause();
   audio4.pause();
 });
