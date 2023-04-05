@@ -166,41 +166,43 @@
 <button class="chat-button">ЧАТИК (в разработке)</button>
 <div id="tg-block">tg: megachad88</div>
 <script>
-  function playMusic() {
-    var music = document.getElementById("music");
-    var seekBar = document.getElementById("seek-bar");
+  function playMusic() {
+    var music = document.getElementById("music");
+    var seekBar = document.getElementById("seek-bar");
 
-    music.play();
+    music.play();
 
-    music.addEventListener("timeupdate", function() {
-      var duration = music.duration;
-      var currentTime = music.currentTime;
+    music.addEventListener("timeupdate", function() {
+      var duration = music.duration;
+      var currentTime = music.currentTime;
 
-      seekBar.value = currentTime / duration * 100;
-    });
+      seekBar.value = currentTime / duration * 100;
+    });
 
-    seekBar.addEventListener("change", function() {
-      var duration = music.duration;
-      var currentTime = seekBar.value / 100 * duration;
+    seekBar.addEventListener("change", function() {
+      var duration = music.duration;
+      var currentTime = seekBar.value / 100 * duration;
 
-      music.currentTime = currentTime;
-    });
-  }
+      music.currentTime = currentTime;
+    });
+  }
 
-  function pauseMusic() {
-    var music = document.getElementById("music");
+  function pauseMusic() {
+    var music = document.getElementById("music");
 
-    music.pause();
-  }
+    music.pause();
+  }
 
-  function goBack() {
-    var music = document.getElementById("music");
-    music.currentTime -= 10;
-  }
+  function goBack() {
+    var music = document.getElementById("music");
+    music.currentTime -= 10;
+  }
 
-  document.querySelector('.chat-button').addEventListener('click', function() {
-    alert('Чатик в разработке.');
-  });
+  const chatButton = document.querySelector('.chat-button');
+
+  chatButton.addEventListener('click', function() {
+    window.location.href = 'chat.html';
+  });
 </script>
 </body>
 </html>
