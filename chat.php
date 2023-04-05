@@ -1,9 +1,12 @@
 <?php
+$servername = "sql7.freesqldatabase.com";
+$username = "sql7611364";
+$password = "3bi3v1jHS5";
 
-   $conn = new mysqli("sql7.freesqldatabase.com", "sql7611364", "3bi3v1jHS5", "chatlog");
-  
-   if($conn) {
-       echo "успех";
-   }
-   
+$conn = new mysqli($servername, $username, $password);
+
+if ($conn->connect_error) {
+   die("Ошибка подключения: " . $conn->connect_error);
+}
+echo "Успешное подключение";
 ?>
