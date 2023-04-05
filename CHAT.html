@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>test</title>
+<title>Chat</title>
 </head>
 <body>
- <?php include 'chat.php'; ?>
+<form action="chat.php" method="post">
+<label for="nickname">Nickname:</label>
+<input type="text" id="nickname" name="nickname"><br><br>
+<label for="message">Message:</label>
+<input type="text" id="message" name="message"><br><br>
+<input type="submit" value="Send">
+</form>
 </body>
 </html>
