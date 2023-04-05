@@ -1,22 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Подключение к базе данных</title>
+ <title>test</title>
 </head>
 <body>
- <?php
-  $servername = "sql7.freesqldatabase.com";
-  $username = "sql7611364";
-  $password = "3bi3v1jHS5";
-  $dbname = "sql7611364";
-
-  $conn = new mysqli($servername, $username, $password, $dbname);
-
-  if ($conn->connect_error) {
-      echo "ОШИБКА: Не удалось подключиться к базе данных: " . $conn->connect_error;
-  } else {
-      echo "УСПЕХ: Подключение к базе данных успешно установлено!";
-  }
- ?>
+ <?php include 'chat.php'; ?>
 </body>
 </html>
