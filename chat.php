@@ -2,7 +2,7 @@
 $servername = "sql7.freesqldatabase.com";
 $username = "sql7611364";
 $password = "3bi3v1jHS5";
-$dbname = "chatlog";
+$dbname = "chatlog.sql";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
