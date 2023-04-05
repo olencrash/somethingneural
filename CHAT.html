@@ -1,76 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Chat Window</title>
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <style>
-  body {
-   background-color: #20201e;
-   font-family: Arial, sans-serif;
-  }
-  .chat-container {
-   background-color: #a9a9a9;
-   border: 1px solid #ccc;
-   border-radius: 5px;
-   box-shadow: 0 0 5px #ccc;
-   margin: 10% auto;
-   padding: 5%;
-   width: 90%;
-  }
-  .chat-message {
-   margin-bottom: 10px;
-  }
-  label {
-   display: block;
-   margin-bottom: 5px;
-  }
-  input[type="text"], textarea {
-   border-radius: 3px;
-   border: 1px solid #ccc;
-   box-sizing: border-box;
-   font-size: 4vw;
-   margin-bottom: 5%;
-   padding: 3%;
-   width: 100%;
-  }
-  button {
-   background-color: #f5f5dc;
-   border: none;
-   border-radius: 3px;
-   color: #000;
-   cursor: pointer;
-   font-size: 4vw;
-   padding: 3%;
-   width: 100%;
-  }
- </style>
+    <meta charset="UTF-8">
+    <title>Форма для записи в базу данных</title>
 </head>
 <body>
- <div class="chat-container">
-  
-  <form>
-   <label for="nickname">ваше имя на языке гачимучи:</label>
-   <input type="text" id="nickname" name="nickname">
-   <label for="message">че пиздиш:</label>
-   <textarea id="message" name="message"></textarea>
-   <button type="submit">ЗАОРАТЬ!</button>
-  </form>
- </div>
+    <form method="post" action="">
+        <label for="nickname">Nickname:</label>
+        <input type="text" name="nickname" id="nickname">
+        <br><br>
+        <label for="message">Message:</label>
+        <textarea name="message" id="message"></textarea>
+        <br><br>
+        <input type="submit" name="submit" value="Отправить">
+    </form>
 </body>
-</html> 
-
-<script>
- document.querySelector("form").addEventListener("submit", function(event) {
-  event.preventDefault();
-  var nickname = document.querySelector("#nickname").value;
-  var message = document.querySelector("#message").value;
-  if (nickname !== "" && message !== "") {
-   var chatMessage = document.createElement("div");
-   chatMessage.classList.add("chat-message");
-   chatMessage.innerHTML = "<strong>" + nickname + ":</strong> " + message;
-   document.querySelector(".chat-container").appendChild(chatMessage);
-   document.querySelector("#nickname").value = "";
-   document.querySelector("#message").value = "";
-  }
- });
-</script>
+</html>
